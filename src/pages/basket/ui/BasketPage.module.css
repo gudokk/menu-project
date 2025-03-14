@@ -1,0 +1,21 @@
+
+.container {
+  width: 428px;
+  height: 926px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #F6F6F6;
+  border-radius: 40px;
+  position: relative; 
+  overflow: hidden; 
+}
+
+
+  .products {
+    display: grid;
+    grid-template-columns: 1fr !important; /* Делаем 1 колонку */
+    gap: 20px;
+    padding: 0 28px;
+    justify-content: center; /* Центрируем карточки */
+  }
+  

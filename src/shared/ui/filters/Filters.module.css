@@ -1,0 +1,25 @@
+.filters {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 19px;
+    margin-left: 28px;
+    margin-bottom: 28px;
+  }
+  
+  .button {
+    padding: 8px 12px;
+    font-size: 14px;
+    height: 35px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .active {
+    background: #9DB2CE;
+    color: white;
+  }
+  

@@ -1,0 +1,28 @@
+.button {
+    position: relative;
+    display: flex;
+    background: #9DB2CE;
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .icon {
+    color: #4C5BD4;
+  }
+
+ .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+  }
+  

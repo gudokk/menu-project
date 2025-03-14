@@ -1,0 +1,87 @@
+.basketCard {
+    
+    background-color: white; 
+    padding: 0px;
+    border-radius: 15px; 
+    height: 120px !important; 
+    width: 346px !important; 
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 54px;
+
+  }
+  
+  .imagePlaceholder {
+    width: 60px;
+    height: 60px;
+    background-color: #E5E7EB;
+    border-radius: 12px;
+  }
+  
+  .textContainer {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .name {
+    font-family: "Inder", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+  }
+  
+  .description {
+    font-family: "Inder", sans-serif;
+    font-size: 14px;
+    color: #6B7280;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+    background: #364C84;
+    border-radius: 22px;
+    padding: 4px 8px;
+    gap: 4px;
+  }
+  
+  .button {
+    width: 26px;
+    height: 26px;
+    background: white;
+    color: #364C84;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .count {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* .products {
+
+    gap: 20px;
+    padding: 0 28px;
+    justify-content: center;
+  } */
+
+  .products {
+    display: grid;
+    grid-template-columns: 1fr !important; /* Делаем 1 колонку */
+    gap: 20px;
+    padding: 0 28px;
+    justify-content: center; /* Центрируем карточки */
+  }
+  
