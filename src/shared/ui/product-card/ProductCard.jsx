@@ -10,11 +10,13 @@ export const ProductCard = ({
   onRemove,
   count,
   className = "",
+  imageClassName = "",
+  DesriptionClassName = "",
 }) => {
   return (
     <div className={`${styles.card} ${className}`}>
-      <div className={styles.imagePlaceholder}></div>
-      <div className={styles.footer}>
+      <div className={`${styles.imagePlaceholder} ${imageClassName}`} />
+      <div className={`${styles.footer} ${DesriptionClassName}`}>
         <h3 className={styles.name}>{name}</h3>
         <div className={`${styles.controls} ${count > 0 ? styles.active : ""}`}>
           {count > 0 ? (

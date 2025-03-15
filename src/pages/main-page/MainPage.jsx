@@ -6,6 +6,7 @@ import { ProductCard } from "../../shared/ui/product-card/ProductCard.jsx";
 import { Filters } from "../../shared/ui//filters/Filters.jsx";
 import { Header } from "../../widgets/header/Header";
 import { useCart } from "../../app/context/CartContext";
+import { useFilteredProducts } from "../../features/ProductsFilter/useFilteredProducts";
 
 function MainPage() {
   const navigate = useNavigate();
@@ -14,7 +15,6 @@ function MainPage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("Все");
 
-  const tableNumber = 7;
   const products = [
     { id: 1, name: "Латте", price: 150 },
     { id: 2, name: "Капучино", price: 160 },
@@ -22,13 +22,11 @@ function MainPage() {
     { id: 4, name: "Эспрессо", price: 130 },
   ];
 
-  const filteredProducts = products.filter(
-    (product) =>
-      (activeCategory === "Все" || product.category === activeCategory) &&
-      product.name.toLowerCase().includes(search.toLowerCase())
+  const filteredProducts = useFilteredProducts(
+    products,
+    search,
+    activeCategory
   );
-
-  const totalItems = Object.values(cart).reduce((sum, count) => sum + count, 0);
 
   const handleAdd = (id) => {
     setCart((prev) => ({ ...prev, [id]: (prev[id] || 0) + 1 }));

@@ -1,6 +1,6 @@
 
  :root {
-  font-family: "Inder", sans-serif;
+  font-family: "Inder";
   font-weight: 400;
   font-style: normal;
 
@@ -16,3 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  font-family: "Inder", sans-serif;
+}
+
