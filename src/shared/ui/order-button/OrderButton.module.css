@@ -1,19 +1,19 @@
 .OrderButton {
-    width: 372px;
-    height: 64px;
-    border-radius: 12px;
-    margin-left: 28px;
-    border: 0;
-    padding: 0;
-    border-color: transparent;
-    background-color: #364C84;
-    position: absolute;
-    bottom: 54px; 
+  width: 80%;
+  height: 64px;
+  border-radius: 12px;
+  margin-left: 28px;
+  border: 0;
+  padding: 0;
+  border-color: transparent;
+  background-color: #364c84;
+  position: absolute;
+  bottom: 54px;
 }
 
 .text {
-    font-family: Inder;
-    font-weight: 400;
-    font-size: 32px;
-    color: #F3F3F3;
+  font-family: Inder;
+  font-weight: 400;
+  font-size: 32px;
+  color: #f3f3f3;
 }
