@@ -1,83 +1,80 @@
 .card {
-    height: 198px;
-    max-width: 160px;
-    margin-bottom: 11px;
-    gap: 12px;
-    background: white;
-    border-radius: 16px;
-    padding: 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-  }
-  
-  
-  .imagePlaceholder {
-    width: 160px;
-    height: 155px;
-    border: 50px;
-    background-color: #E5E7EB;
-    border-radius: 16px;
-  }
-  
-  .name {
-    font-family: Inder;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .footer {
-    /* width: 100%; */
-    width: 160px;
-    display: flex;
-    height: 29.35px;
-    /* margin-top: 12px; */
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .controls {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  
-  .button {
-    width: 31px;
-    height: 31px;
-    background: #364C84;
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .count {
-    font-size: 16px;
-    font-family: Inder;
-    font-weight: 400;
-  }
-
-  .counter {
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-    padding-left: 4.5px;
-  }
-
-  .darkButton {
-    width: 20px;
-    height: 20px;
-    background: white;
+  height: 198px;
+  max-width: 176px;
+  margin-bottom: 11px;
+  gap: 12px;
+  background: white;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
 }
-  
-  /* Делаем число белым, если активный счётчик */
+
+.imagePlaceholder {
+  width: 99%;
+  height: 155px;
+  border: 50px;
+  background-color: #e5e7eb;
+  border-radius: 16px;
+}
+
+.name {
+  font-family: "Inder";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.footer {
+  width: 160px;
+  display: flex;
+  height: 29.35px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.button {
+  width: 31px;
+  height: 31px;
+  background: #364c84;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 16px;
+  font-family: Inder;
+  font-weight: 400;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  padding-left: 4.5px;
+}
+
+.darkButton {
+  width: 20px;
+  height: 20px;
+  background: white;
+}
+
+/* Делаем число белым, если активный счётчик */
 .controls.active .count {
   color: white;
   height: 20px;
@@ -91,7 +88,7 @@
 
 /* Когда есть хотя бы 1 товар — подложка становится фиолетовой */
 .controls.active {
-  background:#364C84;
+  background: #364c84;
   height: 29px;
   width: 71px;
   border-radius: 22.58px;

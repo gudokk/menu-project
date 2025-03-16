@@ -1,10 +1,8 @@
 .backButton {
-    width: 96px;
-    height: 50px;
-    border-radius: 50px;
-    padding: 0;
-    /* margin-top: 53px;
-    margin-left: 42px; */
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF
+  width: 96px;
+  height: 50px;
+  border-radius: 50px;
+  padding: 0;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
 }

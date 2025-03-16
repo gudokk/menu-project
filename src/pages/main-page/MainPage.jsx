@@ -7,6 +7,7 @@ import { Filters } from "../../shared/ui//filters/Filters.jsx";
 import { Header } from "../../widgets/header/Header";
 import { useCart } from "../../app/context/CartContext";
 import { useFilteredProducts } from "../../features/ProductsFilter/useFilteredProducts";
+import { products } from "../../features/products/Products.jsx";
 
 function MainPage() {
   const navigate = useNavigate();
@@ -15,26 +16,11 @@ function MainPage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("Все");
 
-  const products = [
-    { id: 1, name: "Латте", price: 150 },
-    { id: 2, name: "Капучино", price: 160 },
-    { id: 3, name: "Американо", price: 140 },
-    { id: 4, name: "Эспрессо", price: 130 },
-  ];
-
   const filteredProducts = useFilteredProducts(
     products,
     search,
     activeCategory
   );
-
-  const handleAdd = (id) => {
-    setCart((prev) => ({ ...prev, [id]: (prev[id] || 0) + 1 }));
-  };
-
-  const handleRemove = (id) => {
-    setCart((prev) => ({ ...prev, [id]: Math.max((prev[id] || 0) - 1, 0) }));
-  };
 
   return (
     <div className={styles.container}>
@@ -46,7 +32,9 @@ function MainPage() {
         />
       </div>
       <h1 className={styles.title}>Меню</h1>
-      <SearchBar value={search} onChange={setSearch} />
+      <div className={styles.SearchBarContainer}>
+        <SearchBar value={search} onChange={setSearch} />
+      </div>
       <Filters
         categories={categories}
         activeCategory={activeCategory}

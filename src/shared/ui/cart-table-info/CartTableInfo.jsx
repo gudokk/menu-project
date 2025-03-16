@@ -9,14 +9,3 @@ export const CartTableInfo = ({ tableNumber, onClick }) => {
     </button>
   );
 };
-
-// export const CartTableInfo = ({ tableNumber, onClick }) => {
-//   return (
-//     <div className={styles.container}>
-//       <button className={styles.button} onClick={onClick}>
-//         <img src={ProfileIcon} alt="Profile" className={styles.icon} />
-//       </button>
-//       <span className={styles.text}>cтолик {tableNumber}</span>
-//     </div>
-//   );
-// };
