@@ -1,5 +1,4 @@
-
- .basketCard {
+.basketCard {
   max-width: 346px;
   height: 120px;
   display: flex;
@@ -16,7 +15,7 @@
   margin-left: 8.5px;
   width: 84px;
   height: 80px;
-  background-color: #E5E7EB;
+  background-color: #e5e7eb;
   border-radius: 10px;
   flex-shrink: 0;
 }
@@ -30,22 +29,22 @@
 }
 
 .name {
-  font-family: "Inder", sans-serif;
+  font-family: "Inder";
   font-size: 16px;
   font-weight: 600;
   color: black;
 }
 
 .description {
-  font-family: "Inder", sans-serif;
+  font-family: "Inder";
   font-size: 14px;
-  color: #6B7280;
+  color: #6b7280;
 }
 
 .controls {
   display: flex;
   align-items: center;
-  background: #364C84;
+  background: #364c84;
   border-radius: 22px;
   padding: 4px 8px;
   gap: 4px;
@@ -55,7 +54,7 @@
   width: 26px;
   height: 26px;
   background: white;
-  color: #364C84;
+  color: #364c84;
   font-size: 16px;
   font-weight: bold;
   border: none;
@@ -70,4 +69,10 @@
   color: white;
   font-size: 16px;
   font-weight: bold;
+}
+
+.EmptyCart {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
 }

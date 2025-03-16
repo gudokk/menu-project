@@ -12,6 +12,7 @@ import { products } from "../../features/products/Products.jsx";
 function MainPage() {
   const navigate = useNavigate();
   const { cart, addToCart, removeFromCart } = useCart();
+  const tableNumber = 7;
   const categories = ["Все", "Кофе", "Чай", "Десерты"];
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("Все");
@@ -28,7 +29,9 @@ function MainPage() {
         <Header
           tableNumber={7}
           cartCount={Object.values(cart).reduce((a, b) => a + b, 0)}
-          onCartClick={() => navigate("/basket", { state: { cart, products } })}
+          onCartClick={() =>
+            navigate("/basket", { state: { cart, products, tableNumber } })
+          }
         />
       </div>
       <h1 className={styles.title}>Меню</h1>

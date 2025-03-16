@@ -44,7 +44,8 @@ export const ProductsInBasket = ({ products, className = "" }) => {
           </ProductCard>
         ))
       ) : (
-        <p>Ваша корзина пуста.</p>
+        // <p>Ваша корзина пуста.</p>
+        <span className={styles.EmptyCart}>Ваша корзина пуста.</span>
       )}
     </div>
   );
