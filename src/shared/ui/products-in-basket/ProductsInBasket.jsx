@@ -50,3 +50,13 @@ export const ProductsInBasket = ({ products, className = "" }) => {
     </div>
   );
 };
+
+ProductsInBasket.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  className: PropTypes.string,
+};
