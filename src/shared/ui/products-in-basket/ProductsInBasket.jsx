@@ -4,7 +4,7 @@ import { ProductCard } from "../product-card/ProductCard";
 import { useCart } from "../../../app/context/CartContext";
 
 export const ProductsInBasket = ({ products, className = "" }) => {
-  const { cart, addToCart, removeFromCart } = useCart();
+  const { cart, handleAddToCart, handleRemoveFromCart } = useCart();
   const selectedProducts = products.filter((product) => cart[product.id] > 0);
 
   return (
@@ -15,8 +15,8 @@ export const ProductsInBasket = ({ products, className = "" }) => {
             key={product.id}
             name={product.name}
             count={cart[product.id]}
-            onAdd={() => addToCart(product.id)}
-            onRemove={() => removeFromCart(product.id)}
+            onAdd={() => handleAddToCart(product.id)}
+            onRemove={() => handleRemoveFromCart(product.id)}
             className={styles["products-in-basket__card"]}
             imageClassName={styles["products-in-basket__image-placeholder"]}
             DesriptionClassName={styles["products-in-basket__footer"]}
@@ -29,14 +29,14 @@ export const ProductsInBasket = ({ products, className = "" }) => {
             <div className={styles["products-in-basket__controls"]}>
               <button
                 className={styles["products-in-basket__button"]}
-                onClick={() => removeFromCart(product.id)}
+                onClick={() => handleRemoveFromCart(product.id)}
               >
                 ➖
               </button>
               <span className={styles["products-in-basket__count"]}>{cart[product.id]}</span>
               <button
                 className={styles["products-in-basket__button"]}
-                onClick={() => addToCart(product.id)}
+                onClick={() => handleAddToCart(product.id)}
               >
                 ➕
               </button>
@@ -49,14 +49,4 @@ export const ProductsInBasket = ({ products, className = "" }) => {
       )}
     </div>
   );
-};
-
-ProductsInBasket.propTypes = {
-  products: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      name: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  className: PropTypes.string,
 };

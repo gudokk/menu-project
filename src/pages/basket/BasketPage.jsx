@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { BackButton } from "../../shared/ui/back-button/BackButton";
 import { OrderButton } from "../../shared/ui/order-button/OrderButton";
 import styles from "./ui/BasketPage.module.css";
-import { ProductsInBasket } from "../../shared/ui/products-in-basket/ProductsInBasket";
+import { CartProducts } from "../../shared/ui/products-in-basket/ProductsInBasket";
 import { CartTableInfo } from "../../shared/ui/cart-table-info/CartTableInfo";
 import { useCart } from "../../app/context/CartContext";
 import { products } from "../../features/products/Products.jsx";
@@ -24,7 +24,7 @@ export default function BasketPage() {
           <CartTableInfo />
         </div>
       </div>
-      <ProductsInBasket products={products} className={styles["basket-page__products"]} />
+      <CartProducts products={products} className={styles["basket-page__products"]} />
       {hasProducts && <OrderButton />}
     </div>
   );

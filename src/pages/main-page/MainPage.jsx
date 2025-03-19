@@ -11,7 +11,7 @@ import { products } from "../../features/products/Products.jsx";
 
 function MainPage() {
   const navigate = useNavigate();
-  const { cart, addToCart, removeFromCart } = useCart();
+  const { cart, handleAddToCart, handleRemoveFromCart } = useCart();
   const tableNumber = 7;
   const categories = ["Все", "Кофе", "Чай", "Десерты"];
   const [search, setSearch] = useState("");
@@ -49,13 +49,13 @@ function MainPage() {
             key={product.id}
             name={product.name}
             count={cart[product.id] || 0}
-            onAdd={() => addToCart(product.id)}
-            onRemove={() => removeFromCart(product.id)}
+            onAdd={() => handleAddToCart(product.id)}
+            onRemove={() => handleRemoveFromCart(product.id)}
           />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default MainPage;
