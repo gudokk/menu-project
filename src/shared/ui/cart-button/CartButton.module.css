@@ -1,4 +1,4 @@
-.button {
+.cart-button {
     position: relative;
     display: flex;
     background: #9DB2CE;
@@ -10,11 +10,11 @@
     cursor: pointer;
   }
   
-  .icon {
+  .cart-button__icon {
     color: #4C5BD4;
   }
 
- .badge {
+ .cart-button__badge {
     position: absolute;
     top: -5px;
     right: -5px;

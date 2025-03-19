@@ -24,8 +24,8 @@ function MainPage() {
   );
 
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
+    <div className={styles["main-page"]}>
+      <div className={styles["main-page__header"]}>
         <Header
           tableNumber={7}
           cartCount={Object.values(cart).reduce((a, b) => a + b, 0)}
@@ -34,8 +34,8 @@ function MainPage() {
           }
         />
       </div>
-      <h1 className={styles.title}>Меню</h1>
-      <div className={styles.SearchBarContainer}>
+      <h1 className={styles["main-page__title"]}>Меню</h1>
+      <div className={styles["main-page__search-bar"]}>
         <SearchBar value={search} onChange={setSearch} />
       </div>
       <Filters
@@ -43,7 +43,7 @@ function MainPage() {
         activeCategory={activeCategory}
         onSelect={setActiveCategory}
       />
-      <div className={styles.products}>
+      <div className={styles["main-page__products"]}>
         {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}

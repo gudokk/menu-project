@@ -7,8 +7,8 @@ export const BackButton = () => {
   const navigate = useNavigate();
 
   return (
-    <button className={styles.backButton} onClick={() => navigate(-1)}>
-      <img src={backIcon} alt="Назад" className={styles.icon} />
+    <button className={styles["back-button"]} onClick={() => navigate(-1)}>
+      <img src={backIcon} alt="Назад" className={styles["back-button__icon"]} />
     </button>
   );
 };

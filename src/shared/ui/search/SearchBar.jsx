@@ -4,11 +4,11 @@ import SearchIcon from "../../assets/search.svg";
 
 export const SearchBar = ({ value, onChange }) => {
   return (
-    <div className={styles.container}>
-      <img src={SearchIcon} alt="Search" className={styles.icon} />
+    <div className={styles["search-bar"]}>
+      <img src={SearchIcon} alt="Search" className={styles["search-bar__icon"]} />
       <input
         type="text"
-        className={styles.input}
+        className={styles["search-bar__input"]}
         placeholder="Поиск"
         value={value}
         onChange={(e) => onChange(e.target.value)}

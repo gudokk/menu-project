@@ -1,4 +1,4 @@
-.overlay {
+.order-modal {
     position: absolute; 
     top: 0;
     left: 0;
@@ -11,7 +11,7 @@
     backdrop-filter: blur(8px);
   }
   
-  .modal {
+  .order-modal__content {
     background: white;
     height: 320px;
     padding: 0px;
@@ -22,12 +22,12 @@
   }
   
   
-  .text {
+  .order-modal__text {
     font-size: 18px;
     margin-top: 66.5px;
   }
   
-  .icon {
+  .order-modal__icon {
     width: 185px;
     height: 170px;
   }

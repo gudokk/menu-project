@@ -14,16 +14,17 @@ export default function BasketPage() {
 
   const { cart } = useCart();
   const hasProducts = Object.values(cart).some((count) => count > 0);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
+    <div className={styles["basket-page"]}>
+      <div className={styles["basket-page__header"]}>
         <BackButton />
-        <div className={styles.right}>
-          <span className={styles.table}>Столик {tableNumber}</span>
+        <div className={styles["basket-page__table-info"]}>
+          <span className={styles["basket-page__table-number"]}>Столик {tableNumber}</span>
           <CartTableInfo />
         </div>
       </div>
-      <ProductsInBasket products={products} className={styles.basketProducts} />
+      <ProductsInBasket products={products} className={styles["basket-page__products"]} />
       {hasProducts && <OrderButton />}
     </div>
   );

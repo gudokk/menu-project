@@ -1,4 +1,4 @@
-.basketCard {
+.products-in-basket__card {
   max-width: 346px;
   height: 120px;
   display: flex;
@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.basketImagePlaceholder {
+.products-in-basket__image-placeholder {
   margin-left: 8.5px;
   width: 84px;
   height: 80px;
@@ -20,7 +20,7 @@
   flex-shrink: 0;
 }
 
-.footerBasket {
+.products-in-basket__footer {
   display: flex;
   width: 229.5px;
   justify-content: space-between;
@@ -28,20 +28,18 @@
   margin-right: 8.5px;
 }
 
-.name {
-  font-family: "Inder";
+.products-in-basket__name {
   font-size: 16px;
   font-weight: 600;
   color: black;
 }
 
-.description {
-  font-family: "Inder";
+.products-in-basket__description {
   font-size: 14px;
   color: #6b7280;
 }
 
-.controls {
+.products-in-basket__controls {
   display: flex;
   align-items: center;
   background: #364c84;
@@ -50,7 +48,7 @@
   gap: 4px;
 }
 
-.button {
+.products-in-basket__button {
   width: 26px;
   height: 26px;
   background: white;
@@ -65,13 +63,13 @@
   cursor: pointer;
 }
 
-.count {
+.products-in-basket__count {
   color: white;
   font-size: 16px;
   font-weight: bold;
 }
 
-.EmptyCart {
+.products-in-basket__empty-cart {
   font-size: 25px;
   display: flex;
   justify-content: center;

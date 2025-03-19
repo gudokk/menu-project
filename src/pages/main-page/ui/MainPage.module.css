@@ -1,4 +1,4 @@
-.container {
+.main-page {
   width: 100%;
   min-width: 360px;
   max-width: 428px;
@@ -9,16 +9,15 @@
   border-radius: 40px;
 }
 
-.title {
+.main-page__title {
   text-align: center;
-  font-family: "Inder";
   font-size: 20px;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 25px;
 }
 
-.products {
+.main-page__products {
   display: grid;
   grid-template-columns: repeat(2, minmax(160px, 1fr));
   gap: 20px;
@@ -26,7 +25,7 @@
   justify-content: center;
 }
 
-.SearchBarContainer {
+.main-page__search-bar {
   display: flex;
   justify-content: center;
 }

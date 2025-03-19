@@ -1,4 +1,4 @@
-.container {
+.basket-page {
   width: 100%;
   min-width: 360px;
   max-width: 428px;
@@ -13,7 +13,7 @@
   padding-bottom: 118px;
 }
 
-.header {
+.basket-page__header {
   display: flex;
   margin-top: 53.5px;
   margin-left: 42px;
@@ -24,11 +24,11 @@
   align-items: center;
 }
 
-.right {
+.basket-page__table-info {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 26px;
   width: 145px;
   height: 48px;
   background: #ffffff;
@@ -36,7 +36,7 @@
   box-shadow: 0px 4px 20px 0px #0000000d;
 }
 
-.basketProducts {
+.basket-page__products{
   margin-top: 54px;
   display: grid;
   grid-template-columns: 1fr;

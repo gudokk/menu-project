@@ -1,4 +1,4 @@
-.card {
+.product-card {
   height: 198px;
   max-width: 176px;
   margin-bottom: 11px;
@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.imagePlaceholder {
+.product-card__image-placeholder {
   width: 99%;
   height: 155px;
   border: 50px;
@@ -20,13 +20,12 @@
   border-radius: 16px;
 }
 
-.name {
-  font-family: "Inder";
+.product-card__name {
   font-size: 16px;
   font-weight: 400;
 }
 
-.footer {
+.product-card__footer {
   width: 98%;
   display: flex;
   height: 29.35px;
@@ -34,13 +33,13 @@
   align-items: center;
 }
 
-.controls {
+.product-card__controls {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.button {
+.product-card__button {
   width: 31px;
   height: 31px;
   background: #364c84;
@@ -55,39 +54,38 @@
   cursor: pointer;
 }
 
-.count {
+.product-card__count {
   font-size: 16px;
-  font-family: Inder;
   font-weight: 400;
 }
 
-.counter {
+.product-card__counter {
   display: flex;
   justify-content: center;
   gap: 3px;
   padding-left: 4.5px;
 }
 
-.darkButton {
+.product-card__button--dark {
   width: 20px;
   height: 20px;
   background: white;
 }
 
 /* Делаем число белым, если активный счётчик */
-.controls.active .count {
+.product-card__controls--active .product-card__count {
   color: white;
   height: 20px;
   width: 16px;
 }
 
 /* Когда активен счётчик — кнопки становятся белыми */
-.controls.active .button {
+.product-card__controls--active .product-card__button {
   background: white;
 }
 
 /* Когда есть хотя бы 1 товар — подложка становится фиолетовой */
-.controls.active {
+.product-card__controls--active {
   background: #364c84;
   height: 29px;
   width: 71px;

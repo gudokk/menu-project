@@ -1,4 +1,4 @@
-.container {
+.table-info {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -10,13 +10,11 @@
 
   }
   
-  .text {
+  .table-info__text {
     font-size: 16px;
-    font-family: Inder;
-    font-weight: 400;
   }
 
-  .button {
+  .table-info__button {
     background: #9DB2CE;
     border: none;
     padding: 0;

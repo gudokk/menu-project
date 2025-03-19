@@ -8,10 +8,10 @@ export const OrderButton = () => {
   return (
     <>
       <button
-        className={styles.OrderButton}
+        className={styles["order-button"]}
         onClick={() => setIsModalOpen(true)}
       >
-        <span className={styles.text}>Заказать</span>
+        <span className={styles["order-button__text"]}>Заказать</span>
       </button>
       {isModalOpen && <OrderModal onClose={() => setIsModalOpen(false)} />}
     </>

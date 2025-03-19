@@ -1,14 +1,12 @@
-.profileIcon {
-  margin-left: 8px;
-  margin-top: 6.5px;
-}
 
-.button {
-  background: #9db2ce;
-  border: none;
-  padding: 0;
-  height: 40px;
-  width: 40px;
-  border-radius: 40px;
-  cursor: pointer;
-}
+  .table-info__button {
+    background: #9DB2CE;
+    border: none;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+  }
+  
+  

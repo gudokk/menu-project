@@ -7,7 +7,7 @@
     margin-bottom: 28px;
   }
   
-  .button {
+  .filters__button {
     padding: 8px 12px;
     font-size: 14px;
     height: 35px;
@@ -18,7 +18,7 @@
     white-space: nowrap;
   }
   
-  .active {
+  .filters__button--active {
     background: #9DB2CE;
     color: white;
   }

@@ -1,4 +1,4 @@
-.OrderButton {
+.order-button {
   width: 80%;
   height: 64px;
   border-radius: 12px;
@@ -11,9 +11,7 @@
   bottom: 54px;
 }
 
-.text {
-  font-family: Inder;
-  font-weight: 400;
+.order-button__text {
   font-size: 32px;
   color: #f3f3f3;
 }

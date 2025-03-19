@@ -8,7 +8,7 @@ export const ProductsInBasket = ({ products, className = "" }) => {
   const selectedProducts = products.filter((product) => cart[product.id] > 0);
 
   return (
-    <div className={`${styles.container} ${className}`}>
+    <div className={`${styles["products-in-basket"]} ${className}`}>
       {selectedProducts.length > 0 ? (
         selectedProducts.map((product) => (
           <ProductCard
@@ -17,25 +17,25 @@ export const ProductsInBasket = ({ products, className = "" }) => {
             count={cart[product.id]}
             onAdd={() => addToCart(product.id)}
             onRemove={() => removeFromCart(product.id)}
-            className={styles.basketCard}
-            imageClassName={styles.basketImagePlaceholder}
-            DesriptionClassName={styles.footerBasket}
+            className={styles["products-in-basket__card"]}
+            imageClassName={styles["products-in-basket__image-placeholder"]}
+            DesriptionClassName={styles["products-in-basket__footer"]}
           >
-            <div className={styles.imagePlaceholder} />
-            <div className={styles.footer}>
-              <p className={styles.name}>{product.name}</p>
-              <p className={styles.description}>описание</p>
+            <div className={styles["products-in-basket__image-placeholder"]} />
+            <div className={styles["products-in-basket__footer"]}>
+              <p className={styles["products-in-basket__name"]}>{product.name}</p>
+              <p className={styles["products-in-basket__description"]}>описание</p>
             </div>
-            <div className={styles.controls}>
+            <div className={styles["products-in-basket__controls"]}>
               <button
-                className={styles.button}
+                className={styles["products-in-basket__button"]}
                 onClick={() => removeFromCart(product.id)}
               >
                 ➖
               </button>
-              <span className={styles.count}>{cart[product.id]}</span>
+              <span className={styles["products-in-basket__count"]}>{cart[product.id]}</span>
               <button
-                className={styles.button}
+                className={styles["products-in-basket__button"]}
                 onClick={() => addToCart(product.id)}
               >
                 ➕
@@ -45,7 +45,7 @@ export const ProductsInBasket = ({ products, className = "" }) => {
         ))
       ) : (
         // <p>Ваша корзина пуста.</p>
-        <span className={styles.EmptyCart}>Ваша корзина пуста.</span>
+        <span className={styles["products-in-basket__empty-cart"]}>Ваша корзина пуста.</span>
       )}
     </div>
   );
