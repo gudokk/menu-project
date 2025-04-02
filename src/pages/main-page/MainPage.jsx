@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./ui/MainPage.module.css";
 import { SearchBar } from "../../shared/ui/search/SearchBar.jsx";
 import { ProductCard } from "../../shared/ui/product-card/ProductCard.jsx";
-import { Filters } from "../../shared/ui//filters/Filters.jsx";
+import { Filters } from "../../shared/ui/filters/Filters.jsx";
 import { Header } from "../../widgets/header/Header";
 import { useCart } from "../../app/context/CartContext";
 import { useFilteredProducts } from "../../features/ProductsFilter/useFilteredProducts";
-import { products } from "../../features/products/Products.jsx";
 
 function MainPage() {
   const navigate = useNavigate();
@@ -17,11 +16,32 @@ function MainPage() {
   const [search, setSearch] = useState("");
   const [activeCategory, setActiveCategory] = useState("Все");
 
-  const filteredProducts = useFilteredProducts(
-    products,
-    search,
-    activeCategory
-  );
+  const [products, setProducts] = useState([]);  // Состояние для продуктов
+  const [loading, setLoading] = useState(true);  // Состояние загрузки
+  const [error, setError] = useState(null);  // Состояние для ошибок
+
+  // Функция для получения продуктов с бекенда
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch("api/products");
+        if (!response.ok) {
+          throw new Error(`Ошибка при загрузке данных: ${response.status}`);
+        }
+
+        const data = await response.json();
+        setProducts(data);
+        setLoading(false);
+      } catch (error) {
+        setError(error.message);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  const filteredProducts = useFilteredProducts(products, search, activeCategory);
 
   return (
     <div className={styles["main-page"]}>
@@ -44,18 +64,20 @@ function MainPage() {
         onSelect={setActiveCategory}
       />
       <div className={styles["main-page__products"]}>
-        {filteredProducts.map((product) => (
+        {loading && <p>Загрузка...</p>}
+        {error && <p>Ошибка: {error}</p>}
+        {!loading && !error && filteredProducts.map((product) => (
           <ProductCard
-            key={product.id}
-            name={product.name}
-            count={cart[product.id] || 0}
-            onAdd={() => handleAddToCart(product.id)}
-            onRemove={() => handleRemoveFromCart(product.id)}
+            key={product.ID} // Используем уникальный ID
+            Name={product.Name}
+            Count={cart[product.ID] || 0}
+            onAdd={() => handleAddToCart(product.ID)}
+            onRemove={() => handleRemoveFromCart(product.ID)}
           />
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default MainPage;

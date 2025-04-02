@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useLocation } from "react-router-dom";
 import { BackButton } from "../../shared/ui/back-button/BackButton";
@@ -6,14 +7,13 @@ import styles from "./ui/BasketPage.module.css";
 import { CartProducts } from "../../shared/ui/products-in-basket/ProductsInBasket";
 import { CartTableInfo } from "../../shared/ui/cart-table-info/CartTableInfo";
 import { useCart } from "../../app/context/CartContext";
-import { products } from "../../features/products/Products.jsx";
 
 export default function BasketPage() {
   const location = useLocation();
-  const tableNumber = location.state?.tableNumber || "Неизвестно";
+  const tableNumber = location.state?.tableNumber || "Неизвестно";  // Получаем tableNumber из состояния
 
-  const { cart } = useCart();
-  const hasProducts = Object.values(cart).some((count) => count > 0);
+  const { cart } = useCart(); // Получаем данные корзины из контекста
+  const hasProducts = Object.values(cart).some((count) => count > 0); // Проверяем, есть ли товары в корзине
 
   return (
     <div className={styles["basket-page"]}>
@@ -24,7 +24,8 @@ export default function BasketPage() {
           <CartTableInfo />
         </div>
       </div>
-      <CartProducts products={products} className={styles["basket-page__products"]} />
+      {/* Отображаем выбранные товары в корзине */}
+      <CartProducts products={location.state?.products || []} className={styles["basket-page__products"]} />
       {hasProducts && <OrderButton />}
     </div>
   );

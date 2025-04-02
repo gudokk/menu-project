@@ -1,7 +1,6 @@
 .filters {
     display: flex;
     gap: 10px;
-    overflow-x: auto;
     margin-top: 19px;
     margin-left: 28px;
     margin-bottom: 28px;

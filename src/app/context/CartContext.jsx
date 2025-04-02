@@ -10,12 +10,12 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState({}); // Глобальное состояние корзины
 
   // Универсальная функция изменения количества товара
-  const updateCart = (id, delta) => {
+  const updateCart = (ID, delta) => {
     setCart((prev) => {
-      const newCount = (prev[id] || 0) + delta;
-      const newCart = { ...prev, [id]: newCount };
+      const newCount = (prev[ID] || 0) + delta;
+      const newCart = { ...prev, [ID]: newCount };
 
-      if (newCount <= 0) delete newCart[id]; // Удаляем товар если 0
+      if (newCount <= 0) delete newCart[ID]; // Удаляем товар если 0
       return newCart;
     });
   };
@@ -24,8 +24,8 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
-        handleAddToCart: (id) => updateCart(id, 1),
-        handleRemoveFromCart: (id) => updateCart(id, -1),
+        handleAddToCart: (ID) => updateCart(ID, 1),
+        handleRemoveFromCart: (ID) => updateCart(ID, -1),
       }}
     >
       {children}

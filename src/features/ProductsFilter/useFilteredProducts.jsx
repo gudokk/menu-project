@@ -2,10 +2,14 @@ import { useMemo } from "react";
 
 export function useFilteredProducts(products, search, activeCategory) {
   return useMemo(() => {
-    return products.filter(
-      (product) =>
+    return products.filter((product) => {
+      const productName = product.Name ? product.Name.toLowerCase() : ''; // Используем Name вместо name
+
+      return (
         (activeCategory === "Все" || product.category === activeCategory) &&
-        product.name.toLowerCase().includes(search.toLowerCase())
-    );
+        productName.includes(search.toLowerCase())
+      );
+    });
   }, [products, search, activeCategory]);
 }
+
